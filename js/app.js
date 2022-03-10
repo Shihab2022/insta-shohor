@@ -16,7 +16,7 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-    likedPostsId.plus(id); 
+    likedPostsId.push(id); 
     showPosts(posts);
 };
 
@@ -57,11 +57,7 @@ const createPost = (post) => {
     div.innerHTML = `
               <div class="post__header">
                 <div class="post__profile">
-                  <a
-                    href="https://github.com/ProgrammingHero1"
-                    target="_blank"
-                    class="post__avatar"
-                  >
+                  <a href="https://github.com/ProgrammingHero1" target="_blank" class="post__avatar" >
                     <img src="${image}" alt="User Picture" />
                   </a>
                   <a href="#" class="post__user">phero</a>
@@ -95,9 +91,7 @@ const createPost = (post) => {
 
                   <div class="post__indicators"></div>
 
-                  <button class="post__button post__button--align-right" onclick="reportPost(${
-                      post.id
-                  })">
+                  <button class="post__button post__button--align-right" onclick="reportPost(${post.id})">
                     <i class="fa-solid fa-ban"></i>
                   </button>
                 </div>
@@ -112,7 +106,8 @@ const createPost = (post) => {
 
                     <span>Liked by
                       <a class="post__name--underline" href="#">user123</a> and
-                      <a href="#">73 others</a></span>
+                      <a href="#">73 others</a>
+                      </span>
                   </div>
 
                   <hr/>
@@ -128,7 +123,7 @@ const createPost = (post) => {
                   <span class="post__date-time">30 minutes ago</span>
                 </div>
               </div>
-      `;
+             `;
     return div;
 };
 
