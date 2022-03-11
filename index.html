@@ -70,8 +70,8 @@
 
     <div class="d-grid gap-3 d-md-block">
         <button onclick="bonuse('js-work')" class="btn btn-info" type="button">JS WORK</button>
-        <button onclick="bonuse('event-loop')" class="btn btn-primary" type="button">EVENT LOOP</button>
-        <button onclick="bonuse()" class="btn btn-danger" type="button">LOCAL VS SECTION</button>
+        <button onclick="bonuse('event-loop')" class="btn btn-warning" type="button">EVENT LOOP</button>
+        <button onclick="bonuse('local-session')" class="btn btn-danger" type="button">LOCAL VS SECTION</button>
       </div>
 
       <div id="js-work" class=" my-3">
@@ -92,13 +92,29 @@
       <div id="event-loop" class=" my-3">
         <h4>What does event loop do ?</h4>
         <article class="my-2">
-             <span class="text-info fs-1">J</span> avascript has  a runtime model based on an event loop . Which is responsible for executing the code , collecting and processing events and exectunig queued sub-tasks. The event loop is a process that waits for the call stack to be clear before puching callbacks from Task Quseue to the call stack . Once the call stack is clear, the event loop triggers and checks the test Queue for aviable call back. An event loop is something that pulls stuff out of the queue and places it onto the function execution stack when ever the function stack becomes empty .
+            <i class="fa-solid fa-quote-left text-warning"></i> Javascript has  a runtime model based on an event loop . Which is responsible for executing the code , collecting and processing events and exectunig queued sub-tasks. The event loop is a process that waits for the call stack to be clear before puching callbacks from Task Quseue to the call stack . Once the call stack is clear, the event loop triggers and checks the test Queue for aviable call back. An event loop is something that pulls stuff out of the queue and places it onto the function execution stack when ever the function stack becomes empty .<i class="fa-solid fa-quote-right text-warning"></i>
         </article>
     </div>
 
 
 
+    <div id="local-session" class=" my-3">
+        <h4>Different between local storage vs session storage ?</h4>
 
+        <h5 class="mt-4">(1) Local storage</h5>
+        <article class="my-2">
+           The local storage is an object that helps to store data with no expiration date . It is persisted through page relods and stays with the browser until it is cleared manually or trough a setting  . The user can access a pages local storage without any time limit . So , it is possible to obtain data the next day or after a month or a year.
+        </article>
+
+        <h5 class="mt-4">(2) Session storage</h5>
+        <article class="my-2">
+      Session storage acts in a similar way to local storage .But it stores data only for ane session . Therefore the data is deleted when the user close the browser tab .
+        </article>
+
+        <article class="my-2">
+            Finally we can said <br> <i class="fa-solid fa-quote-left text-danger"></i>  Local storage is a type of web storage object avilavle in HTML 5 that allows storing data with on expiration data  . In the other hand , Session storage is type of web storage object avilable in HTML5 that storing data for one session . <i class="fa-solid fa-quote-right text-danger"></i>
+              </article> 
+    </div>
 
 
 

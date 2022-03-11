@@ -154,18 +154,15 @@ const bonuse= (id) => {
   if (id === "js-work") {
       document.getElementById( "js-work" ).style.display = "block";
       document.getElementById( "event-loop" ).style.display = "none";
-      document.getElementById( "reported" ).style.display = "none";
+      document.getElementById( "local-session" ).style.display = "none";
   } else if (id === "event-loop") {
       document.getElementById( "event-loop" ).style.display = "block";
       document.getElementById( "js-work" ).style.display = "none";
-      document.getElementById( "reported" ).style.display = "none";
+      document.getElementById( "local-session" ).style.display = "none";
 
-      displayLikedPosts();
   } else {
-      document.getElementById( "reported" ).style.display = "block";
-      document.getElementById( "posts" ).style.display = "none";
-      document.getElementById( "liked" ).style.display = "none";
-
-      displayReportedPosts();
+      document.getElementById( "local-session" ).style.display = "block";
+      document.getElementById( "js-work" ).style.display = "none";
+      document.getElementById( "event-loop" ).style.display = "none";
   }
 };
