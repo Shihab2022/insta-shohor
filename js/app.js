@@ -49,8 +49,8 @@ const switchTab = (id) => {
         displayReportedPosts();
     }
 };
-{/* <img src="${image}" alt="User Picture" /> */}
 const createPost = (post) => {
+  
     const image = post.image;
     const comment=post.comments[0]
     const div = document.createElement( "article" );
@@ -59,7 +59,7 @@ const createPost = (post) => {
               <div class="post__header">
                 <div class="post__profile">
                   <a href="https://github.com/ProgrammingHero1" target="_blank" class="post__avatar" >
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="User Picture" />
+                    <img src="${post.userImage}" alt="User Picture" />
              
                   </a>
                   <a href="#" class="post__user">phero</a>
@@ -146,3 +146,26 @@ const loadPosts = async () =>{
 }
 
 loadPosts();
+
+
+/************************************************bonuse section ************************************************ */
+
+const bonuse= (id) => {
+  if (id === "js-work") {
+      document.getElementById( "js-work" ).style.display = "block";
+      document.getElementById( "liked" ).style.display = "none";
+      document.getElementById( "reported" ).style.display = "none";
+  } else if (id === "liked") {
+      document.getElementById( "liked" ).style.display = "block";
+      document.getElementById( "posts" ).style.display = "none";
+      document.getElementById( "reported" ).style.display = "none";
+
+      displayLikedPosts();
+  } else {
+      document.getElementById( "reported" ).style.display = "block";
+      document.getElementById( "posts" ).style.display = "none";
+      document.getElementById( "liked" ).style.display = "none";
+
+      displayReportedPosts();
+  }
+};
