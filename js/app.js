@@ -150,12 +150,12 @@ loadPosts();
 
 /************************************************bonuse section ************************************************ */
 
-const bonuse= (id) => {
-  if (id === "js-work") {
+const bonuse= (data) => {
+  if (data === "js-work") {
       document.getElementById( "js-work" ).style.display = "block";
       document.getElementById( "event-loop" ).style.display = "none";
       document.getElementById( "local-session" ).style.display = "none";
-  } else if (id === "event-loop") {
+  } else if (data === "event-loop") {
       document.getElementById( "event-loop" ).style.display = "block";
       document.getElementById( "js-work" ).style.display = "none";
       document.getElementById( "local-session" ).style.display = "none";

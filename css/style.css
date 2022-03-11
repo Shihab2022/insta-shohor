@@ -254,17 +254,9 @@ img {
 #event-loop{
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
+#local-session{
+  display: none;
+}
 
 @media only screen and (max-width: 992px) {
   #posts {
